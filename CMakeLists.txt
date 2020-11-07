@@ -6,11 +6,4 @@ set(CMAKE_C_STANDARD 99)
 add_executable(converter converter.c bmp_info.c bmp_info.h)
 add_executable(comparer comparer.c bmp_info.c bmp_info.h qdbmp.c qdbmp.h)
 
-if(MSVC)
-  target_compile_options(converter PRIVATE /W4 /WX)
-  target_compile_options(comparer PRIVATE /W4 /WX)
-else()
-  target_compile_options(converter PRIVATE -Wall -Wextra -pedantic -Werror)
-  target_compile_options(comparer PRIVATE -Wall -Wextra -pedantic -Werror)
-endif()
 
