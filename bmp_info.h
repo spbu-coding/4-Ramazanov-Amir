@@ -4,7 +4,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "qdbmp.h"
 
 #define BYTE unsigned char
 #define WORD unsigned short
