@@ -25,6 +25,7 @@ int main(int argc, char *argv[]) {
             if (writing_result != 0) {
                 return writing_result;
             }
+            free(image);
         } else {
             BMP_8 *image = malloc(sizeof(*image));
             int loading_result = load_bmp_8(image, src_path);
@@ -35,6 +36,7 @@ int main(int argc, char *argv[]) {
             if (writing_result != 0) {
                 return writing_result;
             }
+            free(image);
         }
     }
     return 0;
